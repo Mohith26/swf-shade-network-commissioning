@@ -1,0 +1,67 @@
+{
+  "machine": {
+    "platform": "macOS-26.4.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "python": "3.9.6",
+    "note": "single thread, simulated clock for bus time"
+  },
+  "bus_config": {
+    "baud": 38400,
+    "timeout_s": 0.02
+  },
+  "discovery": [
+    {
+      "n_nodes": 32,
+      "address_space": 254,
+      "probes_per_run": 286,
+      "found": 32,
+      "bus_time_s_median": 5.3993,
+      "wall_time_s_median": 0.00299,
+      "probes_per_sec_wall": 95720.2,
+      "repeats": 5
+    },
+    {
+      "n_nodes": 128,
+      "address_space": 254,
+      "probes_per_run": 382,
+      "found": 128,
+      "bus_time_s_median": 4.9778,
+      "wall_time_s_median": 0.01313,
+      "probes_per_sec_wall": 29096.7,
+      "repeats": 5
+    },
+    {
+      "n_nodes": 254,
+      "address_space": 254,
+      "probes_per_run": 508,
+      "found": 254,
+      "bus_time_s_median": 4.3814,
+      "wall_time_s_median": 0.03311,
+      "probes_per_sec_wall": 15343.8,
+      "repeats": 5
+    }
+  ],
+  "end_to_end": [
+    {
+      "n_nodes": 32,
+      "health_probes_per_node": 6,
+      "bus_time_s_median": 7.0682,
+      "wall_time_s_median": 0.0056,
+      "repeats": 5
+    },
+    {
+      "n_nodes": 128,
+      "health_probes_per_node": 6,
+      "bus_time_s_median": 11.6749,
+      "wall_time_s_median": 0.04068,
+      "repeats": 5
+    },
+    {
+      "n_nodes": 254,
+      "health_probes_per_node": 6,
+      "bus_time_s_median": 17.5546,
+      "wall_time_s_median": 0.13024,
+      "repeats": 5
+    }
+  ]
+}

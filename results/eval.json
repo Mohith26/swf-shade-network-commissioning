@@ -1,0 +1,146 @@
+{
+  "config": {
+    "per_class": 50,
+    "episodes_total": 350,
+    "probes_per_node": 6,
+    "seed": 7,
+    "test_size": 0.3,
+    "node_count_choices": [
+      24,
+      32,
+      40,
+      48
+    ],
+    "feature_names": [
+      "frac_missing",
+      "frac_unexpected",
+      "frac_group_mismatch",
+      "frac_garbled_discovery",
+      "mean_reply_rate",
+      "min_reply_rate",
+      "frac_zero_reply",
+      "frac_partial_reply",
+      "mean_garble_rate",
+      "max_garble_rate",
+      "frac_garbly_nodes",
+      "suffix_zero_frac",
+      "suffix_bad_frac",
+      "mean_latency_std",
+      "unexpected_healthy_frac"
+    ],
+    "model": "DecisionTreeClassifier(max_depth=6)"
+  },
+  "honesty": {
+    "synthetic_bus": true,
+    "invented_protocol": true,
+    "injected_faults": true,
+    "note": "All episodes are simulated and seeded; no real hardware involved."
+  },
+  "generation_wall_s": 2.41,
+  "train_episodes": 245,
+  "test_episodes": 105,
+  "classifier": {
+    "per_type": {
+      "no_fault": {
+        "precision": 0.9375,
+        "recall": 1.0,
+        "f1": 0.9677,
+        "support": 15
+      },
+      "duplicate_address": {
+        "precision": 1.0,
+        "recall": 0.9333,
+        "f1": 0.9655,
+        "support": 15
+      },
+      "offline_node": {
+        "precision": 0.8824,
+        "recall": 1.0,
+        "f1": 0.9375,
+        "support": 15
+      },
+      "flaky_node": {
+        "precision": 1.0,
+        "recall": 0.8667,
+        "f1": 0.9286,
+        "support": 15
+      },
+      "line_noise": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      },
+      "miswired_segment": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      },
+      "stale_address_table": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      }
+    },
+    "macro": {
+      "precision": 0.9743,
+      "recall": 0.9714,
+      "f1": 0.9713
+    },
+    "accuracy": 0.9714
+  },
+  "rule_baseline": {
+    "per_type": {
+      "no_fault": {
+        "precision": 0.9375,
+        "recall": 1.0,
+        "f1": 0.9677,
+        "support": 15
+      },
+      "duplicate_address": {
+        "precision": 1.0,
+        "recall": 0.8667,
+        "f1": 0.9286,
+        "support": 15
+      },
+      "offline_node": {
+        "precision": 0.9375,
+        "recall": 1.0,
+        "f1": 0.9677,
+        "support": 15
+      },
+      "flaky_node": {
+        "precision": 0.8667,
+        "recall": 0.8667,
+        "f1": 0.8667,
+        "support": 15
+      },
+      "line_noise": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      },
+      "miswired_segment": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      },
+      "stale_address_table": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 15
+      }
+    },
+    "macro": {
+      "precision": 0.9631,
+      "recall": 0.9619,
+      "f1": 0.9615
+    },
+    "accuracy": 0.9619
+  }
+}
